@@ -25,8 +25,12 @@ define CONFIGURE
 ...
 # OSX
 brew install sdl2 sdl2_ttf sdl2_image SDL2_gfx
-mkdir -p $(LIBS_DIR)
+mkdir -p $(LIBS_DIR) $(LIBS_DIR)/glad $(LIBS_DIR)/KHR
+wget -O $(LIBS_DIR)/glad/glad.h https://raw.githubusercontent.com/tnicolas42/libs/master/cpp/OpenGL/glad/glad/glad.h
+wget -O $(LIBS_DIR)/glad/glad.c https://raw.githubusercontent.com/tnicolas42/libs/master/cpp/OpenGL/glad/glad/glad.c
+wget -O $(LIBS_DIR)/KHR/khrplatform.h https://raw.githubusercontent.com/tnicolas42/libs/master/cpp/OpenGL/glad/KHR/khrplatform.h
 wget -O $(LIBS_DIR)/stb_image.h https://raw.githubusercontent.com/nothings/stb/0224a44/stb_image.h
+wget -O $(LIBS_DIR)/json.hpp https://raw.githubusercontent.com/nlohmann/json/8d92ca8/single_include/nlohmann/json.hpp
 ...
 endef
 export CONFIGURE
