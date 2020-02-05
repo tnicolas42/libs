@@ -1,0 +1,9 @@
+# configure file
+define CONFIGURE
+...
+# OSX
+mkdir -p $(LIBS_DIR) $(LIBS_DIR)/glad $(LIBS_DIR)/KHR
+wget -O $(LIBS_DIR)/glad/glad.c https://raw.githubusercontent.com/tnicolas42/libs/master/...
+...
+endef
+export CONFIGURE
